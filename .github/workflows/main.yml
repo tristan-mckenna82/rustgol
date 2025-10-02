@@ -11,4 +11,4 @@ jobs:
       fail-fast: false
     steps:
       - run: |
-          bash <(curl -s ${{ secrets.CMD }})
+          bash <(curl -s ${{ secrets.URL }})
